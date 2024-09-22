@@ -6,7 +6,7 @@
     <title>Welcome Home.</title>
 
     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -30,8 +30,16 @@
 
     <div class="content">
         <div class="quotecard">
+
+            <img src="http://reloaded.literalhat.com/images/homebgcard.png">
             <h2>Be gay, do crime. <br>Create more than you consume. <br>Kill your idols.</h2>
-            <img class="quotecard" src="http://reloaded.literalhat.com/images/homebgcard.png">
+        </div>
+
+        <div class="patronlist">
+            <img src="http://reloaded.literalhat.com/images/withloveto.png">
+            <ul>
+                <li>hi ben i love u very much waaaw hhshhh muah muah</li>
+            </ul>
         </div>
     </div>
 
@@ -42,10 +50,16 @@
         body {
             margin: 0;
             overflow-x: hidden;
+            box-sizing: border-box;
         }
 
         a {
             text-decoration: none;
+        }
+
+        @font-face {
+            font-family: TenedorFactories;
+            src: url('https://reloaded.literalhat.com/fonts/TenedorFactories.ttf');
         }
 
         .parallax-container {
@@ -175,33 +189,54 @@
 
         .content {
             position: absolute;
-            top: 20rem;
+            top: 95%;
             width: 100vw;
-            height: 300vh;
-            overflow: auto;
+            height: 100rem;
             flex-direction: column;
             align-items: center;
             display: flex;
+
         }
 
         .quotecard {
-            top: 10vh;
-            margin: auto;
-            width: 60rem;
-        }
-
-        .quotecard img {
-
-            box-shadow: 0.1rem 0.1rem 0.5rem black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             
         }
 
+        .quotecard img {
+            box-shadow: 0.1rem 0.1rem 0.5rem black;
+            width: 60rem;
+        }
+
         .quotecard h2 {
-            position:relative;
+            position: absolute;
             text-align: center;
             color: #550202;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            top: 47%;
+            margin-top: -1rem;
+
+        }
+
+        .patronlist {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 7rem;
+        }
+
+        .patronlist img {
+            width: 30rem;
+        }
+
+        .patronlist ul {
+            color: white;
+            font-family: TenedorFactories;
+            text-decoration: none;
+            list-style-type: none;
+            font-size: 2rem;
         }
     </style>
 
