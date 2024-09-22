@@ -12,12 +12,10 @@
 <body>
 
     <div class="parallax-container">
-        <div class="parallax-layer layer-0" data-parallax-speed="0.1" data-max-scroll="565"></div>
+        <div class="layer-0" data-parallax-speed="0.1" data-max-scroll="565"></div>
         <div class="parallax-layer layer-1" data-parallax-speed="0.4" data-max-scroll="565"></div>
         <div class="parallax-layer layer-2" data-parallax-speed="0.5" data-max-scroll="565"></div>
-        <div class="parallax-layer layer-3" data-parallax-speed="0.6" data-max-scroll="565">
-
-        </div>
+        <div class="parallax-layer layer-3" data-parallax-speed="0.6" data-max-scroll="565"></div>
         <div class="parallax-layer layer-4" data-parallax-speed="0.7" data-max-scroll="565"></div>
         <div class="parallax-layer layer-5" data-parallax-speed="0.65" data-max-scroll="565">
             <div class="menu">
@@ -31,8 +29,10 @@
     </div>
 
     <div class="content">
-
-        <!-- <img class="quotecard" src="http://reloaded.literalhat.com/images/homebgcard.png"> -->
+        <div class="quotecard">
+            <h2>Be gay, do crime. <br>Create more than you consume. <br>Kill your idols.</h2>
+            <img class="quotecard" src="http://reloaded.literalhat.com/images/homebgcard.png">
+        </div>
     </div>
 
 
@@ -50,27 +50,70 @@
 
         .parallax-container {
             position: fixed;
-            overflow: visible;
+            overflow: hidden;
             width: 100vw;
-            height: auto;
-
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .parallax-layer {
-            width: 100%;
-            height: 130%;
-            position: fixed;
-
+            width: 96rem;
+            height: 70rem;
+            position: absolute;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
 
+        /* this is the background layer, set to fill the entire screen */
+        .layer-0 {
+            z-index: 10;
+            background-image: url('http://reloaded.literalhat.com/images/homebg.png');
+            position: absolute;
+            background-repeat: repeat;
+            background-size: auto;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .layer-1 {
+
+            z-index: 11;
+            background-image: url('http://reloaded.literalhat.com/images/home0.png');
+
+
+        }
+
+        .layer-2 {
+
+            z-index: 12;
+            background-image: url('http://reloaded.literalhat.com/images/home1.png');
+
+        }
+
+        .layer-3 {
+
+            z-index: 13;
+            background-image: url('http://reloaded.literalhat.com/images/home2.png');
+
+        }
+
+        .layer-4 {
+            z-index: 14;
+            background-image: url('http://reloaded.literalhat.com/images/home3.png');
+        }
+
+        .layer-5 {
+            z-index: 16;
+        }
+
         .menu a {
             background-color: #e9cfb2;
             font-family: 'Cambria', 'Times New Roman', Times, serif;
-            padding: 0.15vw 0.5vw;
-            font-size: 1.3vw;
+            padding: 0.15rem 0.5rem;
+            font-size: 1.3rem;
             box-shadow: 1px 1px 4px black;
         }
 
@@ -84,13 +127,13 @@
             background-color: black;
             font-family: 'consolas', 'typewriter', 'Courier New', Courier, monospace;
             color: white;
-            padding: 0.2vw 0.5vw;
-            font-size: 0.8vw;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
             box-shadow: 1px 1px 4px black;
             position: absolute;
             top: 62%;
             left: 76%;
-            max-width: 24vw;
+            max-width: 24rem;
         }
 
         #randomsong:hover {
@@ -128,59 +171,37 @@
         }
 
 
-        .layer-0 {
-            z-index: 10;
-            background-image: url('http://reloaded.literalhat.com/images/homebg.png');
-            background-repeat: repeat;
-        }
-
-        .layer-1 {
-
-            z-index: 11;
-            background-image: url('http://reloaded.literalhat.com/images/home0.png');
-
-        }
-
-        .layer-2 {
-
-            z-index: 12;
-            background-image: url('http://reloaded.literalhat.com/images/home1.png');
-
-        }
-
-        .layer-3 {
-
-            z-index: 13;
-            background-image: url('http://reloaded.literalhat.com/images/home2.png');
-
-        }
-
-        .layer-4 {
-            z-index: 14;
-            background-image: url('http://reloaded.literalhat.com/images/home3.png');
-        }
-
-        .layer-5 {
-            z-index: 15;
-        }
 
 
         .content {
             position: absolute;
-            top: 200vh;
+            top: 20rem;
             width: 100vw;
             height: 300vh;
             overflow: auto;
             flex-direction: column;
             align-items: center;
+            display: flex;
         }
 
         .quotecard {
-            position: sticky;
             top: 10vh;
-            width: 60vw;
             margin: auto;
-            /* Center within its parent */
+            width: 60rem;
+        }
+
+        .quotecard img {
+
+            box-shadow: 0.1rem 0.1rem 0.5rem black;
+            
+        }
+
+        .quotecard h2 {
+            position:relative;
+            text-align: center;
+            color: #550202;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            top: 47%;
         }
     </style>
 
