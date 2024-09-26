@@ -1,3 +1,7 @@
-<x-navbar>
-<h2>LiteralGallery.</h2>
-</x-navbar>
+<x-layout>
+
+<x-slot:heading>
+        LiteralGallery
+    </x-slot:heading>
+
+</x-layout>

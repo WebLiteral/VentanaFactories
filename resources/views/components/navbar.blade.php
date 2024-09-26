@@ -9,9 +9,9 @@
     <h1>LiteralHat.Com</h1>
     <p>Yes, this is my new website. Are you mad? I don't care.</p>
     <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/gallery">Gallery</a></li>
+    <x-navlink href="/">Home</x-navlink>
+    <x-navlink href="/about">About</x-navlink>
+    <x-navlink href="/gallery">Gallery</x-navlink>
     </ul>
 
 {{ $slot }}

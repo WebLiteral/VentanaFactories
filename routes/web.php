@@ -13,3 +13,7 @@ Route::get('/about', function () {
 Route::get('/gallery', function () {
     return view('gallery');
 });
+
+Route::get('/tailwind', function () {
+    return view('tailwind');
+});
