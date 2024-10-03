@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
-use App\Models\Artworks;
+use App\Models\Artwork;
 
 Route::get('/', function () {
 
@@ -14,13 +14,16 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view('gallery', ['artworks' => Artworks::all()]);
+    $artworks = Artwork::with('collection')->paginate(10);
+    return view('gallery', [
+        'artworks' => $artworks
+    ]);
 });
 
 Route::get('/artwork/{id}', function ($id) {
 
 
-    $artwork = Artworks::find($id);
+    $artwork = Artwork::find($id);
 
     return view('artwork', ['artwork' => $artwork]);
 });

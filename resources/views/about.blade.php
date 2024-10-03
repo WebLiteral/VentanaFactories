@@ -2,5 +2,7 @@
 <x-slot:heading>
         About
     </x-slot:heading>
-<p>Yeah, Whatever man.</p>
+
+<p>I make things sometimes.</p>
+
 </x-layout>

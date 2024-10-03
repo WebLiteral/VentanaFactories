@@ -6,6 +6,6 @@
 
 <h2 class="font-bold text-lg">{{$artwork['title']}}</h2>
 
-<p>{{$artwork['artworkid']}}</p>
+<p>{{$artwork['id']}}</p>
 
 </x-layout>
